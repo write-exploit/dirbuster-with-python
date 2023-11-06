@@ -6,6 +6,12 @@ import requests
 import sys
 from termcolor import colored
 
+mesaj = '''
+[+]---TURK-----HACK-----TEAM----[+]
+[+]-----------yuathay-----------[+]
+[+]-----------------------------[+]
+'''
+
 #burası kodu çalıştırırken parametre vermemizi sağlıycak
 parser = argparse.ArgumentParser(description='sitedeki gizli dizinleri bulun',usage="tool kullanım rehberi")
 parser.add_argument("-s", "--site", metavar="", type=str, help="site adını gir (başında http/https olmadan)",required=True)
@@ -40,13 +46,13 @@ while True:
         break
     except ValueError:
         print("int bir değer girin")
-
+        
 #sistem windows ise cls linux ise clear komutu çalışacak
 if os.name == 'nt':
     os.system("cls")
 else:
     os.system("clear")
-
+print(mesaj)
 başlangıc = ""
 if soru == 1:
     başlangıc = "http://"
