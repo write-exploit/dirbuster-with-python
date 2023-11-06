@@ -145,7 +145,7 @@ def bul():
                 try:
                     içerik = requests.get(dosya) 
                 except:
-                    pass
+                    continue
                 dosya_kodu = içerik.ok #400 den düşük değerler true döndürür
                 denenen_dosya = içerik.text #sayfa içeriği 
                 time.sleep(0.50) #yarım saniye bekle 
